@@ -1,0 +1,45 @@
+name: acadameet
+description: "An App that books appointments physical or video meeting between students and and their college faculty."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  js:
+  dio:
+  get:
+  http:
+  intl:
+  lottie:
+  stacked:
+  aad_oauth:
+  url_strategy:
+  firebase_core:
+  firebase_auth:
+  google_sign_in:
+  stacked_shared:
+  cloud_firestore:
+  stacked_services:
+  responsive_builder:
+  responsive_web_layout:
+    path: /home/tratum/Coding/flutter-repo/Packages/responsiveLayout/responsive-web-layout
+  flutter_secure_storage:
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  fonts:
+    - family: GlacialIndifference
+      fonts:
+        - asset: assets/fonts/GlacialIndifference/GlacialIndifference-Regular.otf
+        - asset: assets/fonts/GlacialIndifference/GlacialIndifference-Bold.otf
