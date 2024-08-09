@@ -1,5 +1,6 @@
-import 'package:acadameet/routes/home.view/home.view.dart';
-import 'package:acadameet/routes/signup.view/signup.view.dart';
+import '../../routes/home.view/home.view.dart';
+import '../../routes/login.view/login.view.dart';
+import '../../routes/signup.view/signup.view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -7,8 +8,8 @@ import 'package:provider/provider.dart';
 
 import 'app/app.common.functions.dart';
 import 'firebase_options.dart';
-import 'routes/404.view/404.view.dart';
-import 'routes/dashboard.view/dashboard.view.dart';
+import '../../routes/404.view/404.view.dart';
+import '../../routes/dashboard.view/dashboard.view.dart';
 
 // import 'package:flutter_web_plugins/flutter_web_plugins.dart'; should only be used if you want to change the UrlStrategy
 
@@ -38,6 +39,10 @@ final GoRouter _gRouter = GoRouter(
         final token = state.extra as String? ?? 'No secret';
         return DashboardView(accessToken: token);
       },
+    ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginView(),
     ),
     GoRoute(
       path: '/signup',

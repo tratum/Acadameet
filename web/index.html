@@ -19,7 +19,6 @@
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta name="author" content="tratum(Saksham Rawat)">
-    <meta flt-viewport="" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <meta content="Streamlined Academic Appointment Scheduling for Enhanced Coordination and Communication between Students and Faculty." name="description">
 
@@ -39,15 +38,46 @@
     <meta content="acadameet" name="apple-mobile-web-app-title">
     <meta content="207060401514-9a9ich7h1dqko9fcrlk8mnnopdtig3kg.apps.googleusercontent.com"
           name="google-signin-client_id">
-    <link href="icons/Icon-192.png" rel="apple-touch-icon">
+    <link href="icons/Icon-192.webp" rel="apple-touch-icon" type="image/webp">
 
     <!-- Favicon -->
-    <link href="favicon.png" rel="icon" type="image/png"/>
+    <link href="favicon.webp" rel="icon" type="image/webp">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preconnect to required origins -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf">
+    <link rel="preconnect" href="https://accounts.google.com/gsi/client">
+    <link rel="preload" href="https://tratum.github.io/cloud-asset-storage/images/google.webp">
+    <link rel="preload" href="https://tratum.github.io/cloud-asset-storage/images/microsoft-logo.webp">
+    <link rel="preload" href="https://tratum.github.io/cloud-asset-storage/images/acadameet/logo.black.nobg.webp">
+    <link rel="preload" href="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js">
+    <link rel="preload" href="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js">
+    <link rel="preload" href="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js">
 
     <title>Acadameet</title>
-    <link href="manifest.json" rel="manifest">
+    <script type="module" defer src="manifestLoader.js"></script>
 </head>
 <body>
+<div class="main-content" id="loader-content">
+    <div class="loader-container">
+        <img loading="lazy" src="https://tratum.github.io/cloud-asset-storage/images/acadameet/logo.black.nobg.webp" alt="Loading Image"/>
+        <p>Acadameet</p>
+    </div>
+</div>
+<script type="module">
+    window.addEventListener('load', function(ev) {
+        var loaderContent = document.getElementById('loader-content');
+        _flutter.loader.load({
+            onEntrypointLoaded: async function(engineInitializer){
+<!--                loaderContent.style.visibility = 'hidden';-->
+<!--                loaderContent.style.opacity = '0';-->
+<!--                loaderContent.style.pointerEvents = 'none';-->
+                const appRunner = await engineInitializer.initializeEngine();
+                await appRunner.runApp();
+            }
+        })
+    });
+</script>
 <script async src="flutter_bootstrap.js"></script>
 </body>
 </html>

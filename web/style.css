@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'JosefinaSans';
+    src: url('assets/fonts/JosefinaSans/JosefinSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #0a0a0a;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    touch-action: none;
+    font-family: 'JosefinaSans', sans-serif;
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 310px;
+    height: 260px;
+    margin-right: 10px;
+}
+
+p {
+    color: #000; /* Text color */
+    font-size: 82px; /* Adjust font size as needed */
+    font-weight: 600;
+    margin: 40px 0 0;
+}
